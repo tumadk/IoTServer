@@ -39,7 +39,7 @@ app.get('/device/fetch-config/', function(req, res){
 	var sensor = "/sensor/10/A0/analogread/5000/1/";
 	sensor += "\r/peripheral/1/D1/LED/0/0/100/0/";
 	sensor += "\r/peripheral/2/D2/LED/0/0/100/0/";
-	sensor += "\r/peripheral/4/D4/LED/0//0100/0/";
+	sensor += "\r/peripheral/4/D4/LED/0/0/100/0/";
 
 
 	//res.send(JSON.stringify({"sensors":[{"senId":10,"pin":"A0","read":true,"delay":5000,"timer":0}],"triggers":[],"thingys":[]}));
