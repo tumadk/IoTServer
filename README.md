@@ -16,4 +16,12 @@
 			- Ex. er X > Y - så tænd for gadget Z
 		* Bonus: Trigger X på enhed A, så skal enhed B gøre Y
 	- Oprette config.js fil, der ikke er en del af git - så der kan lægges mysql password osv der i.
+	- Databasestruktur
+		* Devices
+		* DeviceTypes
+		* DeviceEnhedsTyper
+		* DeviceEnheder
+		* Triggers
+		* noget niveau på så man har en / flere brugere der kan få adgang til en enhed. Ex. som udgangspunkt kun den der opretter enheden...
+
 
