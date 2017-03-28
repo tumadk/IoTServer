@@ -37,9 +37,34 @@ app.get('/device/fetch-config/', function(req, res){
 	console.log("fetch-config: "+req.query.deviceIP);
 
 	var sensor = "/sensor/10/A0/analogread/5000/1/";
-	sensor += "\r/peripheral/1/D1/LED/0/0/100/0/";
-	sensor += "\r/peripheral/2/D2/LED/0/0/100/0/";
-	sensor += "\r/peripheral/4/D4/LED/0/0/100/0/";
+	sensor += "\r/peripheral/1/D1/LED/1/0/100/0/";
+	sensor += "\r/peripheral/2/D2/LED/1/1/250/1/";
+	sensor += "\r/peripheral/4/D4/LED/1/0/500/0/";
+	/*
+		jeg kan ved gud ikke lige huske hvad den sidste paramtere var til....
+		hvis peripheral så
+		0: peripheral
+		1: id (max 10, eller hvad enhed har af max)
+		2: pin
+		3: Type ex LED
+		4: state_on 1/0
+		5: toggle on/off => 1/0
+		6: toggle_timer_count => toggler hvert toggle_timer_count
+		7: kan det være hvor mange gange den skal toggle? Ex. 1 gang, med toggle_timer_count = 60000, for ex at have en pumpe tændt i 1min? eller er det en trigger der skal fange det?
+
+		Hvis sensor så:
+		0: sensor
+		1: id (max 10, eller hvad enhed har af max)
+		2: pin
+		3: read type - digital/analog - pt. kun analog testet på wemos
+		4: interval
+		5: send stats til server
+
+		Hvis trigger så
+		0: trigger
+		1: ????
+
+	*/
 
 
 	//res.send(JSON.stringify({"sensors":[{"senId":10,"pin":"A0","read":true,"delay":5000,"timer":0}],"triggers":[],"thingys":[]}));
